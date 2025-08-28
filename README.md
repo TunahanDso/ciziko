@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Çiziko (v1.0.0)
 *Tunix · TGame sunar — gerçek zamanlı, takımlı çizim & tahmin oyunu.*
 
@@ -210,3 +211,11 @@ cloudflared tunnel --url http://localhost:4000
 
 
 Not: Hızlı tünel geçici ve prod için uygun değil.
+=======
+﻿# Çiziko
+
+Monorepo:
+- \apps\server  (Node/Express + Socket.IO)
+- \apps\web     (Next.js istemci)
+
+>>>>>>> 980a1c3 (chore: initial import (monorepo: server + web))

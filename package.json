@@ -1,0 +1,10 @@
+{
+  
+  "name": "ciziko-root",
+  "private": true,
+  "workspaces": ["apps/*"],
+  "scripts": {
+    "dev:server": "npm --workspace apps/server run dev",
+    "dev:web": "npm --workspace apps/web run dev"
+  }
+}

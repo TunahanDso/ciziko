@@ -1,0 +1,30 @@
+﻿# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+# Locks (isteğe bağlı takip etmek istersen kaldır)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build/Dist
+dist/
+build/
+coverage/
+.vite/
+
+# Env
+.env
+.env.*
+
+# IDE/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
