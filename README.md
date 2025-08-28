@@ -31,13 +31,13 @@ Mobil-dostu: Dokunmatik destekli canvas.
 │  │  ├─ src/index.ts
 │  │  └─ package.json
 │  └─ web/              # Next.js istemci (TypeScript, React)
-│     ├─ pages/index.tsx (oyun ekranı)
+│     ├─ pages/index.tsx  # oyun ekranı
 │     └─ package.json
-├─ package.json         # (varsa) workspace tanımı
-└─ pnpm-workspace.yaml  # (varsa) pnpm workspaces
+├─ package.json          # (varsa) workspace
+└─ pnpm-workspace.yaml   # (varsa) pnpm workspaces
 
 
-Not: Proje daha önce /server ve /web dizinleriyle çalıştıysa, güncel yapı apps/ altındadır.
+Not: Eski yapı /server ve /web ise güncel monorepo apps/ altındadır.
 
 ⚙️ Script’ler (önerilen)
 
@@ -78,8 +78,8 @@ NEXT_PUBLIC_SOCKET_URL=http://localhost:4000   # veya tünel/prod URL’in
 Node.js 18+ ve npm/pnpm kurulu olmalı. (pnpm önerilir)
 
 # 1) Repoyu klonla
-git clone https://github.com/<kullanici>/<repo-adi>.git C:\Users\<SEN>\Desktop\Ciziko
-cd C:\Users\<SEN>\Desktop\Ciziko
+git clone https://github.com/<kullanici>/<repo-adi>.git
+cd <repo-adi>
 
 # 2) Bağımlılıkları kur (root'ta)
 # pnpm yoksa: npm i -w
@@ -87,10 +87,10 @@ pnpm install
 
 # 3) Env dosyalarını hazırla
 # Sunucu portu:
-# echo PORT=4000 > apps\server\.env
+echo PORT=4000 > apps\server\.env
 
 # Web socket adresi:
-# echo NEXT_PUBLIC_SOCKET_URL=http://localhost:4000 > apps\web\.env.local
+echo NEXT_PUBLIC_SOCKET_URL=http://localhost:4000 > apps\web\.env.local
 
 # 4) Sunucuyu başlat
 cd apps\server
@@ -102,9 +102,9 @@ cd ..\web
 pnpm dev   # veya: npm run dev
 # Web: http://localhost:3000
 
-🌐 Hızlı Uzaktan Deneme (Cloudflare Tunnel)
+🌐 Uzak Erişim (Cloudflare Tunnel — hızlı deneme)
 
-Geçici denemeler içindir, prod’a uygun değildir.
+Geçici denemeler içindir; prod için kalıcı tünel/host önerilir.
 
 # Sunucu terminalinde:
 cloudflared tunnel --url http://localhost:4000
