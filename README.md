@@ -27,41 +27,7 @@ Next.js (web) + Express/Socket.IO (sunucu). Odalar, takım seçimi, hazır/başl
 
 ---
 
-## 🚀 Hızlı Başlangıç (Windows / PowerShell)
-> Node.js 18+ ve npm/pnpm kurulu olmalı. (pnpm önerilir)
 
-```powershell
-# Repoyu klonla
-git clone https://github.com/<kullanici>/<repo-adi>.git C:\Users\<SEN>\Desktop\Ciziko
-cd C:\Users\<SEN>\Desktop\Ciziko
-
-# Bağımlılıkları yükle
-# (pnpm yoksa: npm i)
-pnpm install
-
-# Sunucu için .env (opsiyonel)
-# PORT=4000 olarak çalışır; değiştirmek istersen:
-# echo PORT=4000 > server\.env
-
-# 1. Sunucuyu başlat
-cd server
-pnpm dev    # veya: npm run dev
-# Sunucu: http://localhost:4000
-
-# 2. Yeni bir terminal aç, web'i başlat
-cd ..\web
-# Socket URL'yi ön yüzde görünür kıl (prod/dev):
-# echo NEXT_PUBLIC_SOCKET_URL=http://localhost:4000 > .env.local
-pnpm dev    # veya: npm run dev
-# Web: http://localhost:3000
-Arkadaşların uzaktan bağlansın mı? Hızlı deneme için Cloudflare Tunnel:
-
-# Sunucu terminalinde:
-cloudflared tunnel --url http://localhost:4000
-# Verilen trycloudflare.com adresini .env.local içinde NEXT_PUBLIC_SOCKET_URL olarak kullan.
-
-
-Not: Hızlı tünel geçici ve prod için uygun değil.
 
 ⚙️ Script’ler (önerilen)
 
@@ -208,3 +174,39 @@ Bu repo için şimdilik lisans belirtilmedi (tüm hakları saklı). Ticari/üret
 
 Tunix – TGame
 “Çiz, tahmin et, kazan.”
+
+## 🚀 Hızlı Başlangıç (Windows / PowerShell)
+> Node.js 18+ ve npm/pnpm kurulu olmalı. (pnpm önerilir)
+
+```powershell
+# Repoyu klonla
+git clone https://github.com/<kullanici>/<repo-adi>.git C:\Users\<SEN>\Desktop\Ciziko
+cd C:\Users\<SEN>\Desktop\Ciziko
+
+# Bağımlılıkları yükle
+# (pnpm yoksa: npm i)
+pnpm install
+
+# Sunucu için .env (opsiyonel)
+# PORT=4000 olarak çalışır; değiştirmek istersen:
+# echo PORT=4000 > server\.env
+
+# 1. Sunucuyu başlat
+cd server
+pnpm dev    # veya: npm run dev
+# Sunucu: http://localhost:4000
+
+# 2. Yeni bir terminal aç, web'i başlat
+cd ..\web
+# Socket URL'yi ön yüzde görünür kıl (prod/dev):
+# echo NEXT_PUBLIC_SOCKET_URL=http://localhost:4000 > .env.local
+pnpm dev    # veya: npm run dev
+# Web: http://localhost:3000
+Arkadaşların uzaktan bağlansın mı? Hızlı deneme için Cloudflare Tunnel:
+
+# Sunucu terminalinde:
+cloudflared tunnel --url http://localhost:4000
+# Verilen trycloudflare.com adresini .env.local içinde NEXT_PUBLIC_SOCKET_URL olarak kullan.
+
+
+Not: Hızlı tünel geçici ve prod için uygun değil.
